@@ -1,0 +1,43 @@
+{
+  "entry_filters": {
+    "min_confirmation_score": 6,
+    "require_higher_tf_alignment": true,
+    "min_adx": 25,
+    "rsi_range": [
+      35,
+      65
+    ]
+  },
+  "risk_management": {
+    "min_rr_ratio": 2.0,
+    "use_dynamic_targets": true,
+    "atr_stop_multiplier": 1.2,
+    "atr_target_multiplier": 2.5
+  },
+  "trade_filters": {
+    "avoid_news_events": true,
+    "min_volatility": true,
+    "max_spread": 2.0,
+    "trading_hours": "london_newyork",
+    "max_trades_per_day": 10
+  },
+  "position_sizing": {
+    "method": "confidence_based",
+    "base_risk": 0.01,
+    "confidence_multiplier": {
+      "high": 1.5,
+      "medium": 1.0,
+      "low": 0.5
+    }
+  },
+  "targets": {
+    "use_trailing_stop": true,
+    "trailing_activation": 1.0,
+    "trailing_distance": 0.5,
+    "partial_close": {
+      "enabled": true,
+      "first_target": 1.5,
+      "second_target": 2.5
+    }
+  }
+}
